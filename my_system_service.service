@@ -1,0 +1,18 @@
+[Unit]
+Description=My-demo Service                                                                                   
+
+[Service]
+
+Type=oneshot
+
+ExecStart=/bin/bash /home/haoranx98/code/my_system_service/test.sh 
+#自己的脚本文件
+
+StandardOutput=syslog
+
+StandardError=inherit
+
+[Install]
+
+WantedBy=multi-user.target
+
